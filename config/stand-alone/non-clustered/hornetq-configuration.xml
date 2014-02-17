@@ -43,14 +43,7 @@
       </acceptor>
    </acceptors>
 
-   <security-settings>
-      <security-setting match="#">
-         <permission type="createNonDurableQueue" roles="guest"/>
-         <permission type="deleteNonDurableQueue" roles="guest"/>
-         <permission type="consume" roles="guest"/>
-         <permission type="send" roles="guest"/>
-      </security-setting>
-   </security-settings>
+<security-enabled>false</security-enabled>
 
    <address-settings>
       <!--default for catch all-->
