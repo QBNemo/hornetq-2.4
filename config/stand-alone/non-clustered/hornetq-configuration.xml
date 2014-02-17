@@ -42,7 +42,7 @@
          <param key="direct-deliver" value="false"/>
       </acceptor>
    </acceptors>
-
+   
 <security-enabled>false</security-enabled>
 
    <address-settings>
