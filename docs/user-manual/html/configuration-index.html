@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory">Chapter 50. Configuration Reference</title><link rel="stylesheet" href="css/jbossorg.css" type="text/css"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" name="generator" content="DocBook XSL Stylesheets V1.74.0"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="home" href="index.html" title="HornetQ User Manual"/><link rel="up" href="index.html" title="HornetQ User Manual"/><link rel="prev" href="perf-tuning.html" title="Chapter 49. Performance Tuning"/></head><body><p id="title"><a href="http://www.jboss.org" class="site_href"><strong>JBoss.org</strong></a><a href="http://docs.jboss.org/" class="doc_href"><strong>Community Documentation</strong></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="perf-tuning.html"><strong>Prev</strong></a></li><li class="next"/></ul><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="configuration-index"/>Chapter 50. Configuration Reference</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="configuration-index.html#server.configuration">50.1. Server Configuration</a></span></dt><dd><dl><dt><span class="section"><a href="configuration-index.html#d0e14707">50.1.1. hornetq-configuration.xml</a></span></dt><dt><span class="section"><a href="configuration-index.html#d0e17285">50.1.2. hornetq-jms.xml</a></span></dt><dt><span class="section"><a href="configuration-index.html#configuration.masked-password">50.1.3. Using Masked Passwords in Configuration Files</a></span></dt></dl></dd></dl></div><p>This section is a quick index for looking up configuration. Click on the element name to
-        go to the specific chapter.</p><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="server.configuration"/>50.1. Server Configuration</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e14707"/>50.1.1. hornetq-configuration.xml</h3></div></div></div><p>This is the main core server configuration file.</p><div class="table"><a id="d0e14712"/><p class="title"><b>Table 50.1. Server Configuration</b></p><div class="table-contents"><table summary="Server Configuration" border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>Element Name</th><th>Element Type</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory">Chapter 49. Configuration Reference</title><link rel="stylesheet" href="css/jbossorg.css" type="text/css"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" name="generator" content="DocBook XSL Stylesheets V1.74.0"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="home" href="index.html" title="HornetQ User Manual"/><link rel="up" href="index.html" title="HornetQ User Manual"/><link rel="prev" href="perf-tuning.html" title="Chapter 48. Performance Tuning"/></head><body><p id="title"><a href="http://www.jboss.org" class="site_href"><strong>JBoss.org</strong></a><a href="http://docs.jboss.org/" class="doc_href"><strong>Community Documentation</strong></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="perf-tuning.html"><strong>Prev</strong></a></li><li class="next"/></ul><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="configuration-index"/>Chapter 49. Configuration Reference</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="configuration-index.html#server.configuration">49.1. Server Configuration</a></span></dt><dd><dl><dt><span class="section"><a href="configuration-index.html#d0e14428">49.1.1. hornetq-configuration.xml</a></span></dt><dt><span class="section"><a href="configuration-index.html#d0e16939">49.1.2. hornetq-jms.xml</a></span></dt><dt><span class="section"><a href="configuration-index.html#configuration.masked-password">49.1.3. Using Masked Passwords in Configuration Files</a></span></dt></dl></dd></dl></div><p>This section is a quick index for looking up configuration. Click on the element name to
+        go to the specific chapter.</p><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="server.configuration"/>49.1. Server Configuration</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e14428"/>49.1.1. hornetq-configuration.xml</h3></div></div></div><p>This is the main core server configuration file.</p><div class="table"><a id="d0e14433"/><p class="title"><b>Table 49.1. Server Configuration</b></p><div class="table-contents"><table summary="Server Configuration" border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>Element Name</th><th>Element Type</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>
          <a class="link" href="configuring-transports.html#configuring-transports.acceptors" title="16.1. Understanding Acceptors">acceptors</a>
       </td><td>Sequence of &lt;acceptor/&gt;</td><td>a list of remoting acceptors to create</td><td> </td></tr><tr><td>
          <a class="link" href="configuring-transports.html#configuring-transports.acceptors" title="16.1. Understanding Acceptors">acceptors.acceptor</a>
@@ -54,11 +54,11 @@
          <a class="link" href="queue-attributes.html#queue-attributes.address-settings" title="25.3. Configuring Queues Via Address Settings">address-settings.address-setting.send-to-dla-on-no-route</a>
       </td><td>xsd:boolean</td><td>if there are no queues matching this address, whether to forward message to DLA (if it exists for this address)</td><td> </td></tr><tr><td>
          <a class="link" href="ha.html#ha.allow-fail-back" title="39.1.4. Failing Back to live Server">allow-failback</a>
-      </td><td>xsd:boolean</td><td>Whether a server will automatically stop when a another places a request to take over its place. The use case is when a regular server stops and its backup takes over its duties, later the main server restarts and requests the server (the former backup) to stop operating.</td><td>true</td></tr><tr><td>
+      </td><td>xsd:boolean</td><td>Whether a server will automatically stop when a another places a request to take over its place. The use case is when a regular server stops and its backup takes over its duties, later the main server restarts and requests the server (the former backup) to stop operating.</td><td>false</td></tr><tr><td>
          <a class="link" href="connection-ttl.html#connection-ttl.async-connection-execution" title="17.3. Configuring Asynchronous Connection Execution">async-connection-execution-enabled</a>
       </td><td>xsd:boolean</td><td>Should incoming packets on the server be handed off to a thread from the thread pool for processing or should they be handled on the remoting thread?</td><td>true</td></tr><tr><td>
          <a class="link" href="ha.html" title="Chapter 39. High Availability and Failover">backup</a>
-      </td><td>xsd:boolean</td><td>whether this server is a backup server</td><td>false</td></tr><tr><td>
+      </td><td>xsd:boolean</td><td>whether this server a backup server</td><td>false</td></tr><tr><td>
          <a class="link" href="">backup-group-name</a>
       </td><td>xsd:string</td><td>used for replication, if set, (remote) backup servers will only pair with live servers with matching backup-group-name</td><td> </td></tr><tr><td>
          <a class="link" href="persistence.html#configuring.bindings.journal" title="15.1. Configuring the bindings journal">bindings-directory</a>
@@ -86,15 +86,15 @@
          <a class="link" href="connection-ttl.html" title="Chapter 17. Detecting Dead Connections">bridges.bridge.check-period</a>
       </td><td>xsd:long</td><td>The period (in milliseconds) a bridge's client will check if it failed to receive a ping from the server. -1 disables this check.</td><td>30000 (ms)</td></tr><tr><td>
          <a class="link" href="connection-ttl.html" title="Chapter 17. Detecting Dead Connections">bridges.bridge.connection-ttl</a>
-      </td><td>xsd:long</td><td>how long to keep a connection alive in the absence of any data arriving from the client. This should be greater than the ping period.</td><td>60000 (ms)</td></tr><tr><td>
+      </td><td>xsd:long</td><td>how long to keep a connection alive in the absence of any data arriving from the client</td><td>60000 (ms)</td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.retry-interval</a>
       </td><td>xsd:long</td><td>period (in ms) between successive retries</td><td>2000 (in milliseconds)</td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.retry-interval-multiplier</a>
       </td><td>xsd:double</td><td>multiplier to apply to successive retry intervals</td><td>1</td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.max-retry-interval</a>
-      </td><td>xsd:long</td><td>Limit to the retry-interval growth (due to retry-interval-multiplier)</td><td>2000</td></tr><tr><td>
+      </td><td>xsd:long</td><td>Limit to the retry-interval growth (due to retry-interval-multiplier)</td><td> </td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.reconnect-attempts</a>
-      </td><td>xsd:int</td><td>maximum number of retry attempts, -1 means 'no limits'</td><td>-1</td></tr><tr><td>
+      </td><td>xsd:long</td><td>maximum number of retry attempts, -1 means 'no limits'</td><td>-1</td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.failover-on-server-shutdown</a>
       </td><td>xsd:boolean</td><td>should failover be prompted if target server is cleanly shutdown?</td><td>false</td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.use-duplicate-detection</a>
@@ -105,8 +105,6 @@
       </td><td>xsd:string</td><td>username, if unspecified the cluster-user is used</td><td> </td></tr><tr><td>
          <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.password</a>
       </td><td>xsd:string</td><td>password, if unspecified the cluster-password is used</td><td> </td></tr><tr><td>
-         <a class="link" href="core-bridges.html" title="Chapter 36. Core Bridges">bridges.bridge.reconnect-attempts-same-node</a>
-      </td><td>xsd:int</td><td>Upon reconnection this configures the number of time the same node on the topology will be retried before reseting the server locator and using the initial connectors</td><td>10 (int, 10)</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">broadcast-groups</a>
       </td><td>Sequence of &lt;broadcast-group/&gt;</td><td>a list of broadcast groups to create</td><td> </td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">broadcast-groups.broadcast-group</a>
@@ -130,7 +128,7 @@
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">broadcast-groups.broadcast-group.connector-ref</a>
       </td><td>xsd:string</td><td> </td><td> </td></tr><tr><td>
          <a class="link" href="ha.html#hq.check-for-live-server">check-for-live-server</a>
-      </td><td>xsd:boolean</td><td>Whether to check the cluster for a (live) server using our own server ID when starting up. This option is only necessary for performing 'fail-back' on replicating servers. Strictly speaking this setting only applies to live servers and not to backups.</td><td>false</td></tr><tr><td>
+      </td><td>xsd:boolean</td><td>Whether to check the cluster for a live server (using our own server ID) when starting up. This setting only applies to replicated servers.</td><td>false</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections</a>
       </td><td>Sequence of &lt;cluster-connection/&gt;</td><td>a list of cluster connections</td><td> </td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection</a>
@@ -152,11 +150,11 @@
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.retry-interval</a>
       </td><td>xsd:long</td><td>period (in ms) between successive retries</td><td>500</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.retry-interval-multiplier</a>
-      </td><td>xsd:double</td><td>multiplier to apply to the retry-interval</td><td>1</td></tr><tr><td>
+      </td><td>xsd:double</td><td>multiplier to apply to the retry-interval</td><td> </td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.max-retry-interval</a>
       </td><td>xsd:long</td><td>Maximum value for retry-interval</td><td>2000</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.reconnect-attempts</a>
-      </td><td>xsd:int</td><td>How many attempts should be made to reconnect after failure</td><td>-1</td></tr><tr><td>
+      </td><td>xsd:long</td><td>How many attempts should be made to reconnect after failure</td><td>-1</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.use-duplicate-detection</a>
       </td><td>xsd:boolean</td><td>should duplicate detection headers be inserted in forwarded messages?</td><td>true</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">cluster-connections.cluster-connection.forward-when-no-consumers</a>
@@ -226,7 +224,7 @@
          <a class="link" href="clusters.html#clusters.jgroups-example">discovery-groups.discovery-group.jgroups-channel</a>
       </td><td>xsd:string</td><td>Name of a JGroups Channel. If specified, the server uses the named channel for discovery.</td><td> </td></tr><tr><td>
          <a class="link" href="">discovery-groups.discovery-group.refresh-timeout</a>
-      </td><td>xsd:int</td><td>Period the discovery group waits after receiving the last broadcast from a particular server before removing that servers connector pair entry from its list.</td><td>10000 (in milliseconds)</td></tr><tr><td>
+      </td><td>xsd:int</td><td>Period the discovery group waits after receiving the last broadcast from a particular server before removing that servers connector pair entry from its list.</td><td>5000 (in milliseconds)</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">discovery-groups.discovery-group.local-bind-address</a>
       </td><td>xsd:string</td><td>local bind address that the datagram socket is bound to</td><td>wildcard IP address chosen by the kernel</td></tr><tr><td>
          <a class="link" href="clusters.html" title="Chapter 38. Clusters">discovery-groups.discovery-group.local-bind-port</a>
@@ -258,7 +256,7 @@
          <a class="link" href="ha.html#ha.allow-fail-back" title="39.1.4. Failing Back to live Server">failover-on-shutdown</a>
       </td><td>xsd:boolean</td><td>Will this backup server come live on a normal server shutdown</td><td>false</td></tr><tr><td>
          <a class="link" href="using-server.html#using-server.configuration" title="6.6. Configuration files">file-deployment-enabled</a>
-      </td><td>xsd:boolean</td><td>true means that the server will load configuration from the configuration files</td><td>false</td></tr><tr><td>
+      </td><td>xsd:boolean</td><td>true means that the server will load configuration from the configuration files</td><td>true</td></tr><tr><td>
          <a class="link" href="message-grouping.html" title="Chapter 28. Message Grouping">grouping-handler</a>
       </td><td>Complex element</td><td>Message Group configuration</td><td> </td></tr><tr><td>
          <a class="link" href="message-grouping.html" title="Chapter 28. Message Grouping">grouping-handler.name (required attribute)</a>
@@ -269,12 +267,8 @@
       </td><td>xsd:string</td><td>A reference to a cluster connection address</td><td> </td></tr><tr><td>
          <a class="link" href="message-grouping.html" title="Chapter 28. Message Grouping">grouping-handler.timeout</a>
       </td><td>xsd:int</td><td>How long to wait for a decision</td><td>5000 (ms)</td></tr><tr><td>
-         <a class="link" href="message-grouping.html" title="Chapter 28. Message Grouping">grouping-handler.group-timeout</a>
-      </td><td>xsd:int</td><td>How long a group binding will be used, -1 means for ever. Bindings are removed after this wait elapses. Only valid for LOCAL handlers</td><td>-1 (ms)</td></tr><tr><td>
-         <a class="link" href="message-grouping.html" title="Chapter 28. Message Grouping">grouping-handler.reaper-period</a>
-      </td><td>xsd:long</td><td>How often the reaper will be run to check for timed out group bindings. Only valid for LOCAL handlers</td><td>30000 (ms)</td></tr><tr><td>
          <a class="link" href="duplicate-detection.html#duplicate.id.cache" title="37.2. Configuring the Duplicate ID Cache">id-cache-size</a>
-      </td><td>xsd:int</td><td>the size of the cache for pre-creating message ID's</td><td>20000</td></tr><tr><td>
+      </td><td>xsd:int</td><td>the size of the cache for pre-creating message id's</td><td>2000</td></tr><tr><td>
          <a class="link" href="management.html#management.jmx.configuration" title="30.2.1. Configuring JMX">jmx-domain</a>
       </td><td>xsd:string</td><td>the JMX domain used to registered HornetQ MBeans in the MBeanServer</td><td>org.hornetq</td></tr><tr><td>
          <a class="link" href="management.html#management.jmx.configuration" title="30.2.1. Configuring JMX">jmx-management-enabled</a>
@@ -290,7 +284,7 @@
          <a class="link" href="persistence.html#configuring.message.journal.journal-directory">journal-directory</a>
       </td><td>xsd:string</td><td>the directory to store the journal files in</td><td>data/journal</td></tr><tr><td>
          <a class="link" href="persistence.html#configuring.message.journal.journal-file-size">journal-file-size</a>
-      </td><td>xsd:int</td><td>the size (in bytes) of each journal file</td><td>10485760 (10 * 1024 * 1024 - 10 MiB)</td></tr><tr><td>
+      </td><td>xsd:long</td><td>the size (in bytes) of each journal file</td><td>10485760 (10 * 1024 * 1024 - 10 MiB)</td></tr><tr><td>
          <a class="link" href="persistence.html#configuring.message.journal.journal-max-io">journal-max-io</a>
       </td><td>xsd:int</td><td>the maximum number of write requests that can be in the AIO queue at any one time. Default is 500 for AIO and 1 for NIO.</td><td> </td></tr><tr><td>
          <a class="link" href="persistence.html#configuring.message.journal.journal-min-files">journal-min-files</a>
@@ -308,13 +302,11 @@
          <a class="link" href="">log-journal-write-rate</a>
       </td><td>xsd:boolean</td><td>Whether to log messages about the journal write rate</td><td>false</td></tr><tr><td>
          <a class="link" href="management.html#management.core.configuration" title="30.3.1. Configuring Core Management">management-address</a>
-      </td><td>xsd:string</td><td>the name of the management address to send management messages to. It is prefixed with "jms.queue" so that JMS clients can send messages to it.</td><td>jms.queue.hornetq.management</td></tr><tr><td>
+      </td><td>xsd:string</td><td>the name of the management address to send management messages to</td><td>jms.queue.hornetq.management</td></tr><tr><td>
          <a class="link" href="management.html#management.notifications.core.configuration" title="30.5.2.1. Configuring The Core Management Notification Address">management-notification-address</a>
       </td><td>xsd:string</td><td>the name of the address that consumers bind to receive management notifications</td><td>hornetq.notifications</td></tr><tr><td>
-         <a class="link" href="configuration-index.html#configuration.masked-password" title="50.1.3. Using Masked Passwords in Configuration Files">mask-password</a>
+         <a class="link" href="configuration-index.html#configuration.masked-password" title="49.1.3. Using Masked Passwords in Configuration Files">mask-password</a>
       </td><td>xsd:boolean</td><td>This option controls whether passwords in server configuration need be masked. If set to "true" the passwords are masked.</td><td>false</td></tr><tr><td>
-         <a class="link" href="">max-saved-replicated-journals-size</a>
-      </td><td>xsd:int</td><td>This specifies how many times a replicated backup server can restart after moving its files on start. Once there are this number of backup journal files the server will stop permanently after if fails back.</td><td>2</td></tr><tr><td>
          <a class="link" href="perf-tuning.html#perf-tuning.memory">memory-measure-interval</a>
       </td><td>xsd:long</td><td>frequency to sample JVM memory in ms (or -1 to disable memory sampling)</td><td>-1 (ms)</td></tr><tr><td>
          <a class="link" href="perf-tuning.html#perf-tuning.memory">memory-warning-threshold</a>
@@ -324,7 +316,7 @@
          <a class="link" href="management.html#configuring.message.counters" title="30.6.1. Configuring Message Counters">message-counter-max-day-history</a>
       </td><td>xsd:int</td><td>how many days to keep message counter history</td><td>10 (days)</td></tr><tr><td>
          <a class="link" href="management.html#configuring.message.counters" title="30.6.1. Configuring Message Counters">message-counter-sample-period</a>
-      </td><td>xsd:long</td><td>the sample period (in ms) to use for message counters</td><td>10000</td></tr><tr><td>
+      </td><td>xsd:long</td><td>the sample period (in ms) to use for message counters</td><td>1000</td></tr><tr><td>
          <a class="link" href="message-expiry.html#configuring.expiry.reaper" title="22.3. Configuring The Expiry Reaper Thread">message-expiry-scan-period</a>
       </td><td>xsd:long</td><td>how often (in ms) to scan for expired messages</td><td>30000</td></tr><tr><td>
          <a class="link" href="message-expiry.html#configuring.expiry.reaper" title="22.3. Configuring The Expiry Reaper Thread">message-expiry-thread-priority</a>
@@ -335,7 +327,7 @@
       </td><td>xsd:int</td><td>The max number of concurrent reads allowed on paging</td><td>5</td></tr><tr><td>
          <a class="link" href="paging.html#paging.main.config" title="24.2. Configuration">paging-directory</a>
       </td><td>xsd:string</td><td>the directory to store paged messages in</td><td>data/paging</td></tr><tr><td>
-         <a class="link" href="configuration-index.html#configuration.masked-password" title="50.1.3. Using Masked Passwords in Configuration Files">password-codec</a>
+         <a class="link" href="configuration-index.html#configuration.masked-password" title="49.1.3. Using Masked Passwords in Configuration Files">password-codec</a>
       </td><td>xsd:string</td><td>Class name and its parameters for the Decoder used to decode the masked password. Ignored if mask-password is false. The format of this property is a full qualified class name optionally followed by key/value pairs.</td><td>org.hornetq.utils.DefaultSensitiveStringCodec</td></tr><tr><td>
          <a class="link" href="">perf-blast-pages</a>
       </td><td>xsd:int</td><td>XXX Only meant to be used by project developers</td><td>-1</td></tr><tr><td>
@@ -344,7 +336,7 @@
          <a class="link" href="persistence.html#persistence.enabled" title="15.6. Configuring HornetQ for Zero Persistence">persistence-enabled</a>
       </td><td>xsd:boolean</td><td>true means that the server will use the file based journal for persistence.</td><td>true</td></tr><tr><td>
          <a class="link" href="duplicate-detection.html#duplicate.id.cache" title="37.2. Configuring the Duplicate ID Cache">persist-id-cache</a>
-      </td><td>xsd:boolean</td><td>true means that ID's are persisted to the journal</td><td>true</td></tr><tr><td>
+      </td><td>xsd:boolean</td><td>true means that id's are persisted to the journal</td><td>true</td></tr><tr><td>
          <a class="link" href="queue-attributes.html#predefined.queues" title="25.1. Predefined Queues">queues</a>
       </td><td>Sequence of &lt;queue/&gt;</td><td>a list of pre configured queues to create</td><td> </td></tr><tr><td>
          <a class="link" href="queue-attributes.html#predefined.queues" title="25.1. Predefined Queues">queues.queue</a>
@@ -359,22 +351,20 @@
       </td><td>xsd:string</td><td>optional core filter expression</td><td> </td></tr><tr><td>
          <a class="link" href="queue-attributes.html#predefined.queues" title="25.1. Predefined Queues">queues.queue.durable</a>
       </td><td>xsd:boolean</td><td>whether the queue is durable (persistent)</td><td>true</td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-incoming-interceptors</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-incoming-interceptors</a>
       </td><td>Complex element</td><td>a list of &lt;class-name/&gt; elements with the names of classes to use for interceptor incoming remoting packetsunlimited sequence of &lt;class-name/&gt;</td><td> </td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-incoming-interceptors.class-name</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-incoming-interceptors.class-name</a>
       </td><td>xsd:string</td><td>the fully qualified name of the interceptor class</td><td> </td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-interceptors</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-interceptors</a>
       </td><td>Complex element</td><td>DEPRECATED. This option is deprecated, but it will still be honored. Any interceptor specified here will be considered an "incoming" interceptor. See &lt;remoting-incoming-interceptors&gt; and &lt;remoting-outgoing-interceptors&gt;.unlimited sequence of &lt;class-name/&gt;</td><td> </td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-interceptors.class-name</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-interceptors.class-name</a>
       </td><td>xsd:string</td><td>the fully qualified name of the interceptor class</td><td> </td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-outgoing-interceptors</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-outgoing-interceptors</a>
       </td><td>Complex element</td><td>a list of &lt;class-name/&gt; elements with the names of classes to use for interceptor outcoming remoting packetsunlimited sequence of &lt;class-name/&gt;</td><td> </td></tr><tr><td>
-         <a class="link" href="intercepting-operations.html" title="Chapter 47. Intercepting Operations">remoting-outgoing-interceptors.class-name</a>
+         <a class="link" href="intercepting-operations.html" title="Chapter 46. Intercepting Operations">remoting-outgoing-interceptors.class-name</a>
       </td><td>xsd:string</td><td>the fully qualified name of the interceptor class</td><td> </td></tr><tr><td>
          <a class="link" href="">replication-clustername</a>
       </td><td>xsd:string</td><td>Name of the cluster configuration to use for replication. This setting is only necessary in case you configure multiple cluster connections. It is used by a replicating backups and by live servers that may attempt fail-back.</td><td> </td></tr><tr><td>
-         <a class="link" href="">resolveProtocols</a>
-      </td><td>xsd:boolean</td><td>If true then the HornetQ Server will make use of any Protocol Managers that are in available on the classpath. If false then only the core protocol will be available, unless in Embedded mode where users can inject their own Protocol Managers.</td><td>true</td></tr><tr><td>
          <a class="link" href="">run-sync-speed-test</a>
       </td><td>xsd:boolean</td><td>XXX Only meant to be used by project developers</td><td>false</td></tr><tr><td>
          <a class="link" href="thread-pooling.html#server.scheduled.thread.pool" title="41.1.1. Server Scheduled Thread Pool">scheduled-thread-pool-max-size</a>
@@ -397,17 +387,17 @@
       </td><td>xsd:string</td><td>a comma-separated list of roles to apply the permission to</td><td> </td></tr><tr><td>
          <a class="link" href="">server-dump-interval</a>
       </td><td>xsd:long</td><td>Interval to log server specific information (e.g. memory usage etc)</td><td>-1 (ms)</td></tr><tr><td>
-         <a class="link" href="ha.html#ha.mode.shared" title="39.1.3. Shared Store">shared-store</a>
+         <a class="link" href="">shared-store</a>
       </td><td>xsd:boolean</td><td>'shared-store' applies to live and backup pairs, and it indicates if the live/backup pair share storage or if the data is replicated among them.</td><td>true</td></tr><tr><td>
          <a class="link" href="thread-pooling.html#server.scheduled.thread.pool" title="41.1.1. Server Scheduled Thread Pool">thread-pool-max-size</a>
-      </td><td>xsd:int</td><td>Maximum number of threads to use for the thread pool. -1 means 'no limits'.</td><td>30</td></tr><tr><td>
+      </td><td>xsd:int</td><td>Maximum number of threads to use for the thread pool. -1 means 'no limits'.</td><td>-1</td></tr><tr><td>
          <a class="link" href="transaction-config.html" title="Chapter 18. Resource Manager Configuration">transaction-timeout</a>
-      </td><td>xsd:long</td><td>how long (in ms) before a transaction can be removed from the resource manager after create time</td><td>300000</td></tr><tr><td>
+      </td><td>xsd:long</td><td>how long (in ms) before a transaction can be removed from the resource manager after create time</td><td>60000</td></tr><tr><td>
          <a class="link" href="transaction-config.html" title="Chapter 18. Resource Manager Configuration">transaction-timeout-scan-period</a>
       </td><td>xsd:long</td><td>how often (in ms) to scan for timeout transactions</td><td>1000</td></tr><tr><td>
          <a class="link" href="wildcard-routing.html" title="Chapter 12. Routing Messages With Wild Cards">wild-card-routing-enabled</a>
-      </td><td>xsd:boolean</td><td>true means that the server supports wild card routing</td><td>true</td></tr></tbody></table></div></div><br class="table-break"/></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e17285"/>50.1.2. hornetq-jms.xml</h3></div></div></div><p>This is the configuration file used by the server side JMS service to load JMS
-                Queues, Topics and Connection Factories.</p><div class="table"><a id="d0e17290"/><p class="title"><b>Table 50.2. JMS Server Configuration</b></p><div class="table-contents"><table summary="JMS Server Configuration" border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>Element Name</th><th>Element Type</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>
+      </td><td>xsd:boolean</td><td>true means that the server supports wild card routing</td><td>true</td></tr></tbody></table></div></div><br class="table-break"/></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e16939"/>49.1.2. hornetq-jms.xml</h3></div></div></div><p>This is the configuration file used by the server side JMS service to load JMS
+                Queues, Topics and Connection Factories.</p><div class="table"><a id="d0e16944"/><p class="title"><b>Table 49.2. JMS Server Configuration</b></p><div class="table-contents"><table summary="JMS Server Configuration" border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>Element Name</th><th>Element Type</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>
                                <a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">connection-factory</a>
                             </td><td>ConnectionFactory</td><td>a list of connection factories to create and add to JNDI</td><td> </td></tr></tbody></table></div></div><br class="table-break"/><p/><p/><p>Continued..</p><div class="informaltable"><table border="1"><colgroup><col/><col/><col/><col/></colgroup><tbody><tr><td><a id="configuration.connection-factory.signature"/>
                                <a class="link" href="using-jms.html#using-jms.configure.factory.types" title="7.3. Connection Factory Types">connection-factory.signature (attribute)</a>
@@ -472,25 +462,25 @@
                                     (attribute)</a></td><td>String</td><td>unique name of the queue</td><td> </td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">queue.entry</a></td><td>String</td><td>context where the queue will be bound in JNDI (there can be
                                 many)</td><td> </td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">queue.durable</a></td><td>Boolean</td><td>is the queue durable?</td><td>true</td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">queue.filter</a></td><td>String</td><td>optional filter expression for the queue</td><td> </td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">topic</a></td><td>Topic</td><td>a topic to create and add to JNDI</td><td> </td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">topic.name
                                     (attribute)</a></td><td>String</td><td>unique name of the topic</td><td> </td></tr><tr><td><a class="link" href="using-jms.html#using-jms.server.configuration" title="7.2. JMS Server Configuration">topic.entry</a></td><td>String</td><td>context where the topic will be bound in JNDI (there can be
-                                many)</td><td> </td></tr></tbody></table></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="configuration.masked-password"/>50.1.3. Using Masked Passwords in Configuration Files</h3></div></div></div><p>By default all passwords in HornetQ server's configuration files are in plain text form. This usually poses no security issues as those
+                                many)</td><td> </td></tr></tbody></table></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="configuration.masked-password"/>49.1.3. Using Masked Passwords in Configuration Files</h3></div></div></div><p>By default all passwords in HornetQ server's configuration files are in plain text form. This usually poses no security issues as those
            files should be well protected from unauthorized accessing. However, in some circumstances a user doesn't want to expose its passwords to more
            eyes than necessary. </p><p>HornetQ can be configured to use 'masked' passwords in its configuration files. A masked password is an obscure string representation
            of a real password. To mask a password a user will use an 'encoder'. The encoder takes in the real password and outputs the masked version.
            A user can then replace the real password in the configuration files with the new masked password.
-           When HornetQ loads a masked password, it uses a suitable 'decoder' to decode it into real password.</p><p>HornetQ provides a default password encoder and decoder. Optionally users can use or implement their own encoder and decoder for
-           masking the passwords.</p><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17812"/>50.1.3.1. Password Masking in Server Configuration File</h4></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17815"/>50.1.3.1.1. The password masking property</h5></div></div></div><p>The server configuration file has a property that defines the default masking behaviors over the entire file scope.</p><p><code class="literal">mask-password</code>: this boolean type property indicates if a password should be masked or not. Set it to "true"
-              if you want your passwords masked. The default value is "false".</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17824"/>50.1.3.1.2. Specific masking behaviors</h5></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17827"/>50.1.3.1.2.1. cluster-password</h6></div></div></div><p>The nature of the value of cluster-password is subject to the value of property 'mask-password'. If it is true
-                 the cluster-password is masked.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17832"/>50.1.3.1.2.2. Passwords in connectors and acceptors</h6></div></div></div><p>In the server configuration, Connectors and Acceptors sometimes needs to specify passwords. For example
+           When HornetQ loads a masked password, it uses a suitable 'decoder' to decode it into real password.</p><p>Hornetq provides a default password encoder and decoder. Optionally users can use or implement their own encoder and decoder for
+           masking the passwords.</p><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17466"/>49.1.3.1. Password Masking in Server Configuration File</h4></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17469"/>49.1.3.1.1. The password masking property</h5></div></div></div><p>The server configuration file has a property that defines the default masking behaviors over the entire file scope.</p><p><code class="literal">mask-password</code>: this boolean type property indicates if a password should be masked or not. Set it to "true"
+              if you want your passwords masked. The default value is "false".</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17478"/>49.1.3.1.2. Specific masking behaviors</h5></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17481"/>49.1.3.1.2.1. cluster-password</h6></div></div></div><p>The nature of the value of cluster-password is subject to the value of property 'mask-password'. If it is true
+                 the cluster-password is masked.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17486"/>49.1.3.1.2.2. Passwords in connectors and acceptors</h6></div></div></div><p>In the server configuration, Connectors and Acceptors sometimes needs to specify passwords. For example
                  if a users wants to use an SSL-enabled NettyAcceptor, it can specify a key-store-password and a trust-store-password. Because
                  Acceptors and Connectors are pluggable implementations, each transport will have different password masking needs.</p><p>When a Connector or Acceptor configuration is initialised, HornetQ will add the "mask-password" and
                  "password-codec" values to the Connector or Acceptors params using the keys <code class="literal">hornetq.usemaskedpassword</code>
                  and <code class="literal">hornetq.passwordcodec</code> respectively. The Netty and InVM implementations will use these
-                 as needed and any other implementations will have access to these to use if they so wish.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17845"/>50.1.3.1.2.3. Passwords in Core Bridge configurations</h6></div></div></div><p>Core Bridges are configured in the server configuration file and so the masking of its 'password' properties
-                 follows the same rules as that of 'cluster-password'.</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17850"/>50.1.3.1.3. Examples</h5></div></div></div><p>The following table summarizes the relations among the above-mentioned properties</p><div class="table"><a id="d0e17855"/><p class="title"><b>Table 50.3. </b></p><div class="table-contents"><table border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>mask-password</th><th>cluster-password</th><th>acceptor/connector passwords</th><th>bridge password</th></tr></thead><tbody><tr><td>absent</td><td>plain text</td><td>plain text</td><td>plain text</td></tr><tr><td>false</td><td>plain text</td><td>plain text</td><td>plain text</td></tr><tr><td>true</td><td>masked</td><td>masked</td><td>masked</td></tr></tbody></table></div></div><br class="table-break"/><p>Examples</p><p>Note: In the following examples if related attributed or properties are absent, it means they are not specified in the configure file.</p><p>example 1</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
+                 as needed and any other implementations will have access to these to use if they so wish.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a id="d0e17499"/>49.1.3.1.2.3. Passwords in Core Bridge configurations</h6></div></div></div><p>Core Bridges are configured in the server configuration file and so the masking of its 'password' properties
+                 follows the same rules as that of 'cluster-password'.</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17504"/>49.1.3.1.3. Examples</h5></div></div></div><p>The following table summarizes the relations among the above-mentioned properties</p><div class="table"><a id="d0e17509"/><p class="title"><b>Table 49.3. </b></p><div class="table-contents"><table border="1"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th>mask-password</th><th>cluster-password</th><th>acceptor/connector passwords</th><th>bridge password</th></tr></thead><tbody><tr><td>absent</td><td>plain text</td><td>plain text</td><td>plain text</td></tr><tr><td>false</td><td>plain text</td><td>plain text</td><td>plain text</td></tr><tr><td>true</td><td>masked</td><td>masked</td><td>masked</td></tr></tbody></table></div></div><br class="table-break"/><p>Examples</p><p>Note: In the following examples if related attributed or properties are absent, it means they are not specified in the configure file.</p><p>example 1</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;cluster-password&gt;bbc&lt;/cluster-password&gt;</pre><p>This indicates the cluster password is a plain text value ("bbc").</p><p>example 2</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;mask-password&gt;true&lt;/mask-password&gt;
 &lt;cluster-password&gt;80cf731af62c290&lt;/cluster-password&gt;</pre><p>This indicates the cluster password is a masked value and HornetQ will use its built-in decoder to decode it. All other
-              passwords in the configuration file, Connectors, Acceptors and Bridges, will also use masked passwords.</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17915"/>50.1.3.2. JMS Bridge password masking</h4></div></div></div><p>The JMS Bridges are configured and deployed as separate beans so they need separate configuration to control the password masking.
+              passwords in the configuration file, Connectors, Acceptors and Bridges, will also use masked passwords.</p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17569"/>49.1.3.2. JMS Bridge password masking</h4></div></div></div><p>The JMS Bridges are configured and deployed as separate beans so they need separate configuration to control the password masking.
            A JMS Bridge has two password parameters in its constructor, SourcePassword and TargetPassword. It uses the following two optional
            properties to control their masking:</p><p><code class="literal">useMaskedPassword</code> -- If set to "true" the passwords are masked. Default is false.</p><p><code class="literal">passwordCodec</code> -- Class name and its parameters for the Decoder used to decode the masked password. Ignored if
            <code class="literal">useMaskedPassword</code> is false. The format of this property is a full qualified class name optionally followed by key/value pairs,
@@ -499,7 +489,7 @@
 </code><p/><code class="literal">
 &lt;property name="passwordCodec"&gt;com.foo.FooDecoder;key=value&lt;/property&gt;
 </code><p>HornetQ will load this property and initialize the class with a parameter map containing the "key"-&gt;"value" pair.
-           If <code class="literal">passwordCodec</code> is not specified, the built-in decoder is used.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17941"/>50.1.3.3. Masking passwords in HornetQ ResourceAdapters and MDB activation configurations</h4></div></div></div><p>Both ra.xml and MDB activation configuration have a 'password' property that can be masked. They are controlled by the following two
+           If <code class="literal">passwordCodec</code> is not specified, the built-in decoder is used.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17595"/>49.1.3.3. Masking passwords in HornetQ ResourceAdapters and MDB activation configurations</h4></div></div></div><p>Both ra.xml and MDB activation configuration have a 'password' property that can be masked. They are controlled by the following two
            optional Resource Adapter properties in ra.xml:</p><p><code class="literal">UseMaskedPassword</code> -- If setting to "true" the passwords are masked. Default is false.</p><p><code class="literal">PasswordCodec</code> -- Class name and its parameters for the Decoder used to decode the masked password.
               Ignored if UseMaskedPassword is false. The format of this property is a full qualified class name optionally followed by key/value pairs.
               It is the same format as that for JMS Bridges. Example:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
@@ -512,27 +502,27 @@
   &lt;config-property-name&gt;PasswordCodec&lt;/config-property-name&gt;
   &lt;config-property-type&gt;java.lang.String&lt;/config-property-type&gt;
   &lt;config-property-value&gt;com.foo.ADecoder;key=helloworld&lt;/config-property-value&gt;
-&lt;/config-property&gt;</pre><p>With this configuration, both passwords in ra.xml and all of its MDBs will have to be in masked form.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17958"/>50.1.3.4. Masking passwords in hornetq-users.xml</h4></div></div></div><p>HornetQ's built-in security manager uses plain configuration files where the user passwords are specified in plaintext
+&lt;/config-property&gt;</pre><p>With this configuration, both passwords in ra.xml and all of its MDBs will have to be in masked form.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17612"/>49.1.3.4. Masking passwords in hornetq-users.xml</h4></div></div></div><p>HornetQ's built-in security manager uses plain configuration files where the user passwords are specified in plaintext
            forms by default. To mask those parameters the following two properties are needed:</p><p> <code class="literal">mask-password</code> -- If set to "true" all the passwords are masked. Default is false.</p><p> <code class="literal">password-codec</code> -- Class name and its parameters for the Decoder used to decode the masked password.
            Ignored if <code class="literal">mask-password</code> is false. The format of this property is a full qualified class name optionally
            followed by key/value pairs. It is the same format as that for JMS Bridges. Example:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;mask-password&gt;true&lt;/mask-password&gt;
 &lt;password-codec&gt;org.hornetq.utils.DefaultSensitiveStringCodec;key=hello world&lt;/password-codec&gt;</pre><p>When so configured, the HornetQ security manager will initialize a DefaultSensitiveStringCodec with the parameters
-           "key"-&gt;"hello world", then use it to decode all the masked passwords in this configuration file.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17980"/>50.1.3.5. Choosing a decoder for password masking</h4></div></div></div><p>As described in the previous sections, all password masking requires a decoder. A decoder uses an algorithm to
+           "key"-&gt;"hello world", then use it to decode all the masked passwords in this configuration file.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e17634"/>49.1.3.5. Choosing a decoder for password masking</h4></div></div></div><p>As described in the previous sections, all password masking requires a decoder. A decoder uses an algorithm to
            convert a masked password into its original clear text form in order to be used in various security operations. The algorithm
-           used for decoding must match that for encoding. Otherwise the decoding may not be successful.</p><p>For user's convenience HornetQ provides a default built-in Decoder. However a user can if they so wish implement their own.</p><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17987"/>50.1.3.5.1. The built-in Decoder</h5></div></div></div><p>Whenever no decoder is specified in the configuration file, the built-in decoder is used. The class name for the built-in
+           used for decoding must match that for encoding. Otherwise the decoding may not be successful.</p><p>For user's convenience HornetQ provides a default built-in Decoder. However a user can if they so wish implement their own.</p><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17641"/>49.1.3.5.1. The built-in Decoder</h5></div></div></div><p>Whenever no decoder is specified in the configuration file, the built-in decoder is used. The class name for the built-in
               decoder is org.hornetq.utils.DefaultSensitiveStringCodec. It has both encoding and decoding capabilities. It uses java.crypto.Cipher
               utilities to encrypt (encode) a plaintext password and decrypt a mask string using same algorithm. Using this decoder/encoder is
               pretty straightforward. To get a mask for a password, just run the following in command line:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 java org.hornetq.utils.DefaultSensitiveStringCodec "your plaintext password"</pre><p>Make sure the classpath is correct. You'll get something like</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
-Encoded password: 80cf731af62c290</pre><p>Just copy "80cf731af62c290" and replace your plaintext password with it.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e18000"/>50.1.3.5.2. Using a different decoder</h5></div></div></div><p>It is possible to use a different decoder rather than the built-in one. Simply make sure the decoder
+Encoded password: 80cf731af62c290</pre><p>Just copy "80cf731af62c290" and replace your plaintext password with it.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17654"/>49.1.3.5.2. Using a different decoder</h5></div></div></div><p>It is possible to use a different decoder rather than the built-in one. Simply make sure the decoder
               is in HornetQ's classpath and configure the server to use it as follows:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;password-codec&gt;com.foo.SomeDecoder;key1=value1;key2=value2&lt;/password-codec&gt;</pre><p>If your decoder needs params passed to it you can do this via key/value pairs when configuring.
               For instance if your decoder needs say a "key-location" parameter, you can define like so:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;password-codec&gt;com.foo.NewDecoder;key-location=/some/url/to/keyfile&lt;/password-codec&gt;</pre><p>Then configure your cluster-password like this:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;mask-password&gt;true&lt;/mask-password&gt;
 &lt;cluster-password&gt;masked_password&lt;/cluster-password&gt;</pre><p>When HornetQ reads the cluster-password it will initialize the NewDecoder and use it to decode "mask_password".
-              It also process all passwords using the new defined decoder.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e18017"/>50.1.3.5.3. Implementing your own codecs</h5></div></div></div><p>To use a different decoder than the built-in one, you either pick one from existing libraries or you implement it yourself.
+              It also process all passwords using the new defined decoder.</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="d0e17671"/>49.1.3.5.3. Implementing your own codecs</h5></div></div></div><p>To use a different decoder than the built-in one, you either pick one from existing libraries or you implement it yourself.
               All decoders must implement the <code class="literal">org.hornetq.utils.SensitiveDataCodec&lt;T&gt;</code> interface:</p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 public interface SensitiveDataCodec&lt;T&gt;
 {
@@ -554,4 +544,4 @@ public class MyNewDecoder implements SensitiveDataCodec&lt;String&gt;
       //initialization done here. It is called right after the decoder has been created.
    }
 }</pre><p>Last but not least, once you get your own decoder, please add it to the classpath. Otherwise HornetQ will
-             fail to load it!</p></div></div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="perf-tuning.html"><strong>Prev</strong>Chapter 49. Performance Tuning</a></li><li class="up"><a accesskey="u" href="#"><strong>Top of page</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Front page</strong></a></li></ul></body></html>
+             fail to load it!</p></div></div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="perf-tuning.html"><strong>Prev</strong>Chapter 48. Performance Tuning</a></li><li class="up"><a accesskey="u" href="#"><strong>Top of page</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Front page</strong></a></li></ul></body></html>

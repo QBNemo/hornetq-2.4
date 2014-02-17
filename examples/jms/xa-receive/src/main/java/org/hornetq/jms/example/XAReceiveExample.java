@@ -27,7 +27,7 @@ import javax.transaction.xa.Xid;
 import org.hornetq.common.example.DummyXid;
 import org.hornetq.common.example.HornetQExample;
 import org.hornetq.utils.UUIDGenerator;
-import io.netty.util.CharsetUtil;
+import org.jboss.netty.util.CharsetUtil;
 
 /**
  * A simple JMS example showing the usage of XA support in JMS.

@@ -14,10 +14,8 @@ public class ReceiveOrder
       ClientRequest request = new ClientRequest("http://localhost:9095/queues/jms.queue.orders");
       ClientResponse res = request.head();
       Link pullConsumers = res.getHeaderAsLink("msg-pull-consumers");
-      res.releaseConnection();
       res = pullConsumers.request().post();
       Link consumeNext = res.getHeaderAsLink("msg-consume-next");
-      res.releaseConnection();
       while (true)
       {
          System.out.println("Waiting...");
@@ -37,7 +35,6 @@ public class ReceiveOrder
          {
             throw new RuntimeException("Failure! " + res.getStatus());
          }
-         res.releaseConnection();
       }
    }
 }

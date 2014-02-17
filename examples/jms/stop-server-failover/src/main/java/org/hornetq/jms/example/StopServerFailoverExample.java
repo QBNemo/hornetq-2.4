@@ -58,7 +58,7 @@ public class StopServerFailoverExample extends HornetQExample
          // Step 3. Create a JMS Connection
          connection = connectionFactory.createConnection();
 
-         // Step 4. Create a *non-transacted* JMS Session with client acknowledgement
+         // Step 4. Create a *non-transacted* JMS Session with client acknwoledgement
          Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
 
          // Step 5. Start the connection to ensure delivery occurs
@@ -99,7 +99,7 @@ public class StopServerFailoverExample extends HornetQExample
          System.in.read();
 
          // Step 11. Acknowledging the 2nd half of the sent messages will fail as failover to the
-         // backup server has occurred
+         // backup server has occured
          try
          {
             message0.acknowledge();

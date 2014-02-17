@@ -13,9 +13,7 @@
 
 package org.hornetq.core.example;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 import org.hornetq.api.core.TransportConfiguration;
 import org.hornetq.core.config.Configuration;
@@ -25,13 +23,26 @@ import org.hornetq.core.server.HornetQServer;
 import org.hornetq.core.server.HornetQServers;
 
 /**
- * An EmbeddedServer
+ * A EmbeddedServer
+ *
  * @author <a href="mailto:clebert.suconic@jboss.org">Clebert Suconic</a>
+ *
+ *
  */
 public class EmbeddedServer
 {
 
-	public static void main(final String arg[]) throws Exception
+   // Constants -----------------------------------------------------
+
+   // Attributes ----------------------------------------------------
+
+   // Static --------------------------------------------------------
+
+   // Constructors --------------------------------------------------
+
+   // Public --------------------------------------------------------
+
+   public static void main(final String arg[])
    {
       try
       {
@@ -41,16 +52,8 @@ public class EmbeddedServer
          configuration.setJournalDirectory("target/data/journal");
          configuration.setPersistenceEnabled(false);
          configuration.setSecurityEnabled(false);
-         /**
-          * this map with configuration values is not necessary (it configures the default values).
-          * If you want to modify it to run the example in two different hosts, remember to also
-          * modify the client's Connector at {@link EmbeddedRemoteExample}.
-          */
-         Map<String, Object> map = new HashMap<String, Object>();
-         map.put("host", "localhost");
-         map.put("port", 5445);
 
-         TransportConfiguration transpConf = new TransportConfiguration(NettyAcceptorFactory.class.getName(),map);
+         TransportConfiguration transpConf = new TransportConfiguration(NettyAcceptorFactory.class.getName());
 
          HashSet<TransportConfiguration> setTransp = new HashSet<TransportConfiguration>();
          setTransp.add(transpConf);
@@ -64,7 +67,15 @@ public class EmbeddedServer
       catch (Exception e)
       {
          e.printStackTrace();
-         throw e;
       }
+
    }
+   // Package protected ---------------------------------------------
+
+   // Protected -----------------------------------------------------
+
+   // Private -------------------------------------------------------
+
+   // Inner classes -------------------------------------------------
+
 }

@@ -13,8 +13,6 @@
 package org.hornetq.core.example;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.hornetq.api.core.TransportConfiguration;
 import org.hornetq.api.core.client.ClientConsumer;
@@ -42,18 +40,7 @@ public class EmbeddedRemoteExample
       try
       {
          // Step 3. As we are not using a JNDI environment we instantiate the objects directly
-
-         /**
-          * this map with configuration values is not necessary (it configures the default values).
-          * If you modify it to run the example in two different hosts, remember to also modify the
-          * server's Acceptor at {@link EmbeddedServer}
-          */
-         Map<String,Object> map = new HashMap<String,Object>();
-         map.put("host", "localhost");
-         map.put("port", 5445);
-         // -------------------------------------------------------
-
-         ServerLocator serverLocator = HornetQClient.createServerLocatorWithoutHA(new TransportConfiguration(NettyConnectorFactory.class.getName(), map));
+         ServerLocator serverLocator = HornetQClient.createServerLocatorWithoutHA(new TransportConfiguration(NettyConnectorFactory.class.getName()));
          ClientSessionFactory sf = serverLocator.createSessionFactory();
 
          // Step 4. Create a core queue
@@ -108,4 +95,6 @@ public class EmbeddedRemoteExample
          e.printStackTrace();
       }
    }
+
+
 }

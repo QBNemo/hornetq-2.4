@@ -25,6 +25,7 @@
    <acceptors>
       <acceptor name="netty-acceptor">
          <factory-class>org.hornetq.core.remoting.impl.netty.NettyAcceptorFactory</factory-class>
+         <param key="http-enabled" value="true"/>
          <param key="port" value="8080"/>
       </acceptor>
    </acceptors>

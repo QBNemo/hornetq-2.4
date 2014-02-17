@@ -58,7 +58,7 @@ public class NonTransactionFailoverExample extends HornetQExample
          // Step 3. Create a JMS Connection
          connection = connectionFactory.createConnection();
 
-         // Step 4. Create a *non-transacted* JMS Session with client acknowledgement
+         // Step 4. Create a *non-transacted* JMS Session with client acknwoledgement
          Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
 
          // Step 5. Start the connection to ensure delivery occurs
@@ -93,7 +93,7 @@ public class NonTransactionFailoverExample extends HornetQExample
          }
 
          // Step 10. Crash server #1, the live server, and wait a little while to make sure
-         // pending Acks are on the server's side
+         // it has really crashed
          Thread.sleep(2000);
          killServer(0);
 

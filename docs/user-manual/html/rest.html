@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory">Chapter 43. REST Interface</title><link rel="stylesheet" href="css/jbossorg.css" type="text/css"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" name="generator" content="DocBook XSL Stylesheets V1.74.0"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="home" href="index.html" title="HornetQ User Manual"/><link rel="up" href="index.html" title="HornetQ User Manual"/><link rel="prev" href="logging.html" title="Chapter 42. Logging"/><link rel="next" href="embedding-hornetq.html" title="Chapter 44. Embedding HornetQ"/></head><body><p id="title"><a href="http://www.jboss.org" class="site_href"><strong>JBoss.org</strong></a><a href="http://docs.jboss.org/" class="doc_href"><strong>Community Documentation</strong></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="logging.html"><strong>Prev</strong></a></li><li class="next"><a accesskey="n" href="embedding-hornetq.html"><strong>Next</strong></a></li></ul><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="rest"/>Chapter 43. REST Interface</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="rest.html#d0e12321">43.1. Goals of REST Interface</a></span></dt><dt><span class="section"><a href="rest.html#install">43.2. Installation and Configuration</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12353">43.2.1. Installing Within Pre-configured Environment</a></span></dt><dt><span class="section"><a href="rest.html#d0e12381">43.2.2. Bootstrapping HornetQ Along with REST</a></span></dt><dt><span class="section"><a href="rest.html#configuration">43.2.3. REST Configuration</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#basics">43.3. HornetQ REST Interface Basics</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12474">43.3.1. Queue and Topic Resources</a></span></dt><dt><span class="section"><a href="rest.html#d0e12504">43.3.2. Queue Resource Response Headers</a></span></dt><dt><span class="section"><a href="rest.html#d0e12545">43.3.3. Topic Resource Response Headers</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#posting-messages">43.4. Posting Messages</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12670">43.4.1. Duplicate Detection</a></span></dt><dt><span class="section"><a href="rest.html#d0e12791">43.4.2. Persistent Messages</a></span></dt><dt><span class="section"><a href="rest.html#d0e12810">43.4.3. TTL, Expiration and Priority</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#message-pull">43.5. Consuming Messages via Pull</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12900">43.5.1. Auto-Acknowledge</a></span></dt><dt><span class="section"><a href="rest.html#d0e13030">43.5.2. Manual Acknowledgement</a></span></dt><dt><span class="section"><a href="rest.html#d0e13218">43.5.3. Blocking Pulls with Accept-Wait</a></span></dt><dt><span class="section"><a href="rest.html#d0e13230">43.5.4. Clean Up Your Consumers!</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#message-push">43.6. Pushing Messages</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13246">43.6.1. The Queue Push Subscription XML</a></span></dt><dt><span class="section"><a href="rest.html#d0e13328">43.6.2. The Topic Push Subscription XML</a></span></dt><dt><span class="section"><a href="rest.html#d0e13338">43.6.3. Creating a Push Subscription at Runtime</a></span></dt><dt><span class="section"><a href="rest.html#d0e13371">43.6.4. Creating a Push Subscription by Hand</a></span></dt><dt><span class="section"><a href="rest.html#d0e13384">43.6.5. Pushing to Authenticated Servers</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#d0e13397">43.7. Creating Destinations</a></span></dt><dt><span class="section"><a href="rest.html#d0e13410">43.8. Securing the HornetQ REST Interface</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13413">43.8.1. Within JBoss Application server</a></span></dt><dt><span class="section"><a href="rest.html#d0e13418">43.8.2. Security in other environments</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#d0e13476">43.9. Mixing JMS and REST</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13481">43.9.1. JMS Producers - REST Consumers</a></span></dt><dt><span class="section"><a href="rest.html#d0e13490">43.9.2. REST Producers - JMS Consumers</a></span></dt></dl></dd></dl></div><p>The HornetQ REST interface allows you to leverage the reliability
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory">Chapter 43. REST Interface</title><link rel="stylesheet" href="css/jbossorg.css" type="text/css"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" name="generator" content="DocBook XSL Stylesheets V1.74.0"/><meta xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="home" href="index.html" title="HornetQ User Manual"/><link rel="up" href="index.html" title="HornetQ User Manual"/><link rel="prev" href="logging.html" title="Chapter 42. Logging"/><link rel="next" href="embedding-hornetq.html" title="Chapter 44. Embedding HornetQ"/></head><body><p id="title"><a href="http://www.jboss.org" class="site_href"><strong>JBoss.org</strong></a><a href="http://docs.jboss.org/" class="doc_href"><strong>Community Documentation</strong></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="logging.html"><strong>Prev</strong></a></li><li class="next"><a accesskey="n" href="embedding-hornetq.html"><strong>Next</strong></a></li></ul><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="rest"/>Chapter 43. REST Interface</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="rest.html#d0e12230">43.1. Goals of REST Interface</a></span></dt><dt><span class="section"><a href="rest.html#install">43.2. Installation and Configuration</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12262">43.2.1. Installing Within Pre-configured Environment</a></span></dt><dt><span class="section"><a href="rest.html#d0e12290">43.2.2. Bootstrapping HornetQ Along with REST</a></span></dt><dt><span class="section"><a href="rest.html#configuration">43.2.3. REST Configuration</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#basics">43.3. HornetQ REST Interface Basics</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12383">43.3.1. Queue and Topic Resources</a></span></dt><dt><span class="section"><a href="rest.html#d0e12413">43.3.2. Queue Resource Response Headers</a></span></dt><dt><span class="section"><a href="rest.html#d0e12454">43.3.3. Topic Resource Response Headers</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#posting-messages">43.4. Posting Messages</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12579">43.4.1. Duplicate Detection</a></span></dt><dt><span class="section"><a href="rest.html#d0e12700">43.4.2. Persistent Messages</a></span></dt><dt><span class="section"><a href="rest.html#d0e12719">43.4.3. TTL, Expiration and Priority</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#message-pull">43.5. Consuming Messages via Pull</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e12809">43.5.1. Auto-Acknowledge</a></span></dt><dt><span class="section"><a href="rest.html#d0e12939">43.5.2. Manual Acknowledgement</a></span></dt><dt><span class="section"><a href="rest.html#d0e13127">43.5.3. Blocking Pulls with Accept-Wait</a></span></dt><dt><span class="section"><a href="rest.html#d0e13139">43.5.4. Clean Up Your Consumers!</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#message-push">43.6. Pushing Messages</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13155">43.6.1. The Queue Push Subscription XML</a></span></dt><dt><span class="section"><a href="rest.html#d0e13237">43.6.2. The Topic Push Subscription XML</a></span></dt><dt><span class="section"><a href="rest.html#d0e13247">43.6.3. Creating a Push Subscription at Runtime</a></span></dt><dt><span class="section"><a href="rest.html#d0e13280">43.6.4. Creating a Push Subscription by Hand</a></span></dt><dt><span class="section"><a href="rest.html#d0e13293">43.6.5. Pushing to Authenticated Servers</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#d0e13306">43.7. Creating Destinations</a></span></dt><dt><span class="section"><a href="rest.html#d0e13319">43.8. Securing the HornetQ REST Interface</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13322">43.8.1. Within JBoss Application server</a></span></dt><dt><span class="section"><a href="rest.html#d0e13327">43.8.2. Security in other environments</a></span></dt></dl></dd><dt><span class="section"><a href="rest.html#d0e13385">43.9. Mixing JMS and REST</a></span></dt><dd><dl><dt><span class="section"><a href="rest.html#d0e13390">43.9.1. JMS Producers - REST Consumers</a></span></dt><dt><span class="section"><a href="rest.html#d0e13399">43.9.2. REST Producers - JMS Consumers</a></span></dt></dl></dd></dl></div><p>The HornetQ REST interface allows you to leverage the reliability
         and scalability features of HornetQ over a simple REST/HTTP interface.
         Messages are produced and consumed by sending and receiving simple HTTP
         messages that contain the content you want to push around. For instance,
@@ -22,7 +22,7 @@ Content-Type: application/xml
         Simple and easy. Consuming messages from a queue or topic looks very
         similar. We'll discuss the entire interface in detail later in this
         docbook.
-    </p><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e12321"/>43.1. Goals of REST Interface</h2></div></div></div><p>Why would you want to use HornetQ's REST interface? What are the
+    </p><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e12230"/>43.1. Goals of REST Interface</h2></div></div></div><p>Why would you want to use HornetQ's REST interface? What are the
             goals of the REST interface?
         </p><div class="itemizedlist"><ul><li><p>Easily usable by machine-based (code) clients.</p></li><li><p>Zero client footprint. We want HornetQ to be usable by any
                     client/programming language that has an adequate HTTP client
@@ -51,7 +51,7 @@ Content-Type: application/xml
             you're deploying within JBoss AS 7) or you want the HornetQ REST
             WAR to startup and manage the HornetQ server (e.g. you're deploying
             within something like Apache Tomcat).
-        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12353"/>43.2.1. Installing Within Pre-configured Environment</h3></div></div></div><p>This section should be used when you want to use the HornetQ REST
+        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12262"/>43.2.1. Installing Within Pre-configured Environment</h3></div></div></div><p>This section should be used when you want to use the HornetQ REST
                 interface in an environment that already has HornetQ installed and
                 running, e.g. JBoss AS 7. You must create a Web archive
                 (.WAR) file with the following web.xml settings:
@@ -148,7 +148,7 @@ Content-Type: application/xml
             </p><div xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="note"><h2>Note</h2><p>
                     It is possible to put the WAR file at the "root context" of AS7, but
                     that is beyond the scope of this documentation.
-                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12381"/>43.2.2. Bootstrapping HornetQ Along with REST</h3></div></div></div><p>You can bootstrap HornetQ within your WAR as well. To do this, you
+                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12290"/>43.2.2. Bootstrapping HornetQ Along with REST</h3></div></div></div><p>You can bootstrap HornetQ within your WAR as well. To do this, you
                 must have the HornetQ core and JMS jars along with Netty, Resteasy, and
                 the HornetQ REST jar within your WEB-INF/lib. You must also have a
                 hornetq-configuration.xml, hornetq-jms.xml, and hornetq-users.xml config
@@ -237,7 +237,7 @@ Content-Type: application/xml
       &lt;/dependency&gt;
       &lt;dependency&gt;
          &lt;groupId&gt;org.jboss.spec.javax.jms&lt;/groupId&gt;
-         &lt;artifactId&gt;jboss-jms-api_2.0_spec&lt;/artifactId&gt;
+         &lt;artifactId&gt;jboss-jms-api_1.1_spec&lt;/artifactId&gt;
          &lt;version&gt;1.0.0.Final&lt;/version&gt;
       &lt;/dependency&gt;
       &lt;dependency&gt;
@@ -320,7 +320,7 @@ Content-Type: application/xml
             all over resources to interact with by looking for and traversing links.
             You'll find published links within custom response headers and embedded in
             published XML representations. Let's look at how this works.
-        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12474"/>43.3.1. Queue and Topic Resources</h3></div></div></div><p>To interact with a queue or topic you do a HEAD or GET request on
+        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12383"/>43.3.1. Queue and Topic Resources</h3></div></div></div><p>To interact with a queue or topic you do a HEAD or GET request on
                 the following relative URI pattern:
             </p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 /queues/{name}
@@ -360,7 +360,7 @@ curl --head http://example.com/queues/jms.queue.bar</pre></div><p>The HEAD or GE
                 server. If you treat all URLs as opaque then you will be isolated from
                 implementation changes as the HornetQ REST interface evolves over
                 time.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12504"/>43.3.2. Queue Resource Response Headers</h3></div></div></div><p>Below is a list of response headers you should expect when
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12413"/>43.3.2. Queue Resource Response Headers</h3></div></div></div><p>Below is a list of response headers you should expect when
                 interacting with a Queue resource.
             </p><div class="itemizedlist"><ul><li><p><code class="literal">msg-create</code>. This is a URL you POST messages
                         to. The semantics of this link are described in
@@ -377,7 +377,7 @@ curl --head http://example.com/queues/jms.queue.bar</pre></div><p>The HEAD or GE
                         registering other URLs you want the HornetQ REST server to
                         push messages to. The semantics of this link are described
                         in <a class="link" href="rest.html#message-push" title="43.6. Pushing Messages">Pushing Messages</a>.
-                    </p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12545"/>43.3.3. Topic Resource Response Headers</h3></div></div></div><p>Below is a list of response headers you should expect when
+                    </p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12454"/>43.3.3. Topic Resource Response Headers</h3></div></div></div><p>Below is a list of response headers you should expect when
                 interacting with a Topic resource.
             </p><div class="itemizedlist"><ul><li><p><code class="literal">msg-create</code>. This is a URL you POST
                         messages to. The semantics of this link are described in
@@ -465,7 +465,7 @@ msg-create-next: http://example.com/queues/jms.queue.bar/create</pre><p>Continue
                 the URL within the <code class="literal">msg-create-next</code> header, then just
                 go back to the queue or topic resource to get the
                 <code class="literal">msg-create</code> URL again.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12670"/>43.4.1. Duplicate Detection</h3></div></div></div><p>Sometimes you might have network problems when posting new
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12579"/>43.4.1. Duplicate Detection</h3></div></div></div><p>Sometimes you might have network problems when posting new
                 messages to a queue or topic. You may do a POST and never receive a
                 response. Unfortunately, you don't know whether or not the server
                 received the message and so a re-post of the message might cause
@@ -572,7 +572,7 @@ msg-create-with-id: http://example.com/queues/jms.queue.bar/create/{id}</pre><p>
             </p><p>The advantage of this approach is that the client does not have to
                 repost the message. It also only has to come up with a unique
                 <code class="literal">DUPLICATE_DETECTION_ID</code> once.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12791"/>43.4.2. Persistent Messages</h3></div></div></div><p>By default, posted messages are not durable and will not be
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12700"/>43.4.2. Persistent Messages</h3></div></div></div><p>By default, posted messages are not durable and will not be
                 persisted in HornetQ's journal. You can create durable messages by
                 modifying the default configuration as expressed in Chapter 2 so that
                 all messages are persisted when sent. Alternatively, you can set a URL
@@ -589,7 +589,7 @@ Content-Type: application/xml
    &lt;name&gt;Bill&lt;/name&gt;
    &lt;item&gt;iPhone4&lt;/item&gt;
    &lt;cost&gt;$199.99&lt;/cost&gt;
-&lt;/order&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12810"/>43.4.3. TTL, Expiration and Priority</h3></div></div></div><p>You can set the time to live, expiration, and/or the priority of
+&lt;/order&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12719"/>43.4.3. TTL, Expiration and Priority</h3></div></div></div><p>You can set the time to live, expiration, and/or the priority of
                 the message in the queue or topic by setting an additional query
                 parameter. The <code class="literal">expiration</code> query parameter is an long
                 specify the time in milliseconds since epoch (a long date). The
@@ -657,7 +657,7 @@ Content-Type: application/xml
                 on the same destination be aware that unless the
                 <code class="literal">consumer-window-size</code> is 0 then one consumer
                 might buffer messages while the other consumer gets none.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12900"/>43.5.1. Auto-Acknowledge</h3></div></div></div><p>This section focuses on the auto-acknowledge protocol for
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12809"/>43.5.1. Auto-Acknowledge</h3></div></div></div><p>This section focuses on the auto-acknowledge protocol for
                 consuming messages via a pull. Here's a list of the response
                 headers and URLs you'll be interested in.
             </p><div class="itemizedlist"><ul><li><p><code class="literal">msg-pull-consumers</code>. The URL of
@@ -672,7 +672,7 @@ Content-Type: application/xml
                     </p></li><li><p><code class="literal">msg-consumer</code>. This is a URL
                         pointing back to the consumer or subscription
                         resource created for the client.
-                    </p></li></ul></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12926"/>43.5.1.1. Creating an Auto-Ack Consumer or Subscription</h4></div></div></div><p>Here is an example of creating an auto-acknowledged
+                    </p></li></ul></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12835"/>43.5.1.1. Creating an Auto-Ack Consumer or Subscription</h4></div></div></div><p>Here is an example of creating an auto-acknowledged
                     queue pull consumer.
                 </p><div xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="orderedlist"><ol><li><p>Find the pull-consumers URL by doing a HEAD or
                             GET request to the base queue resource.
@@ -737,7 +737,7 @@ http://example.com/topics/jms.topic.foo/pull-subscriptions/auto-ack/222/consume-
                             subscription resource that was created on the server. It is good
                             to remember this URL, although, as you'll see later, it is
                             transmitted with each response just to remind you.
-                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12980"/>43.5.1.2. Consuming Messages</h4></div></div></div><p>After you have created a consumer resource, you are ready to
+                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12889"/>43.5.1.2. Consuming Messages</h4></div></div></div><p>After you have created a consumer resource, you are ready to
                     start pulling messages from the server. Notice that when you created
                     the consumer for either the queue or topic, the response contained a
                     <code class="literal">msg-consume-next</code> response header. POST to the URL
@@ -804,7 +804,7 @@ HTTP/1.1 200 Ok
 Content-Type: application/xml
 msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/consume-next-3
 
-&lt;order&gt;...&lt;/order&gt;</pre></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13016"/>43.5.1.3. Recovering From Network Failures</h4></div></div></div><p>If you experience a network failure and do not know if your post
+&lt;order&gt;...&lt;/order&gt;</pre></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12925"/>43.5.1.3. Recovering From Network Failures</h4></div></div></div><p>If you experience a network failure and do not know if your post
                     to a msg-consume-next URL was successful or not, just re-do your POST.
                     A POST to a msg-consume-next URL is idempotent, meaning that it will
                     return the same result if you execute on any one msg-consume-next URL
@@ -815,7 +815,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
                     requires you to use the next new msg-consume-next URL returned with
                     each response. Information about what state the client is in is
                     embedded within the actual URL.
-                </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13021"/>43.5.1.4. Recovering From Client or Server Crashes</h4></div></div></div><p>If the server crashes and you do a POST to the msg-consume-next
+                </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12930"/>43.5.1.4. Recovering From Client or Server Crashes</h4></div></div></div><p>If the server crashes and you do a POST to the msg-consume-next
                     URL, the server will return a 412 (Preconditions Failed) response
                     code. This is telling you that the URL you are using is out of sync
                     with the server. The response will contain a new msg-consume-next
@@ -834,7 +834,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
                     message and before the client receives the message. If you want more
                     reliable messaging, then you must use the acknowledgement
                     protocol.
-                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13030"/>43.5.2. Manual Acknowledgement</h3></div></div></div><p>The manual acknowledgement protocol is similar to the auto-ack
+                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e12939"/>43.5.2. Manual Acknowledgement</h3></div></div></div><p>The manual acknowledgement protocol is similar to the auto-ack
                 protocol except there is an additional round trip to the server to tell
                 it that you have received the message and that the server can internally
                 ack the message. Here is a list of the response headers you will be
@@ -851,7 +851,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
                     </p></li><li><p><code class="literal">msg-acknowledgement</code>. URL used to acknowledge a message.
                     </p></li><li><p><code class="literal">msg-consumer</code>. This is a URL pointing back to the consumer or subscription
                         resource created for the client.
-                    </p></li></ul></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13061"/>43.5.2.1. Creating manually-acknowledged consumers or
+                    </p></li></ul></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e12970"/>43.5.2.1. Creating manually-acknowledged consumers or
                     subscriptions
                 </h4></div></div></div><p>Here is an example of creating an auto-acknowledged queue pull
                     consumer.
@@ -926,7 +926,7 @@ http://example.com/topics/jms.topic.foo/pull-subscriptions/acknowledged/222/cons
                             subscription resource that was created on the server. It is good
                             to remember this URL, although, as you'll see later, it is
                             transmitted with each response just to remind you.
-                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13127"/>43.5.2.2. Consuming and Acknowledging a Message</h4></div></div></div><p>After you have created a consumer resource, you are ready to
+                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13036"/>43.5.2.2. Consuming and Acknowledging a Message</h4></div></div></div><p>After you have created a consumer resource, you are ready to
                     start pulling messages from the server. Notice that when you created
                     the consumer for either the queue or topic, the response contained a
                     <code class="literal">msg-acknowledge-next</code> response header. POST to the
@@ -981,7 +981,7 @@ msg-acknowledge-next:
 http://example.com/queues/jms.queue.bar/pull-consumers/333/acknowledge-next-2</pre><p>Whether you acknowledge or unacknowledge the message, the
                             response will contain a new msg-acknowledge-next header that you
                             must use to obtain the next message.
-                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13173"/>43.5.2.3. Recovering From Network Failures</h4></div></div></div><p>If you experience a network failure and do not know if your post
+                        </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13082"/>43.5.2.3. Recovering From Network Failures</h4></div></div></div><p>If you experience a network failure and do not know if your post
                     to a
                     <code class="literal">msg-acknowledge-next</code>
                     or
@@ -997,7 +997,7 @@ http://example.com/queues/jms.queue.bar/pull-consumers/333/acknowledge-next-2</p
                     see that they contain information about the expected current state of
                     the server. This is how the server knows what the client is
                     expecting.
-                </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13190"/>43.5.2.4. Recovering From Client or Server Crashes</h4></div></div></div><p>If the server crashes and while you are doing a POST to the
+                </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="d0e13099"/>43.5.2.4. Recovering From Client or Server Crashes</h4></div></div></div><p>If the server crashes and while you are doing a POST to the
                     <code class="literal">msg-acknowledge-next</code> URL, just re-post. Everything
                     should reconnect all right. On the other hand, if the server crashes
                     while you are doing a POST to<code class="literal">msg-acknowledgement</code>,
@@ -1021,7 +1021,7 @@ http://example.com/queues/jms.queue.bar/pull-consumers/333/acknowledge-next-2</p
                     Instead, you can re-create the consumer resource with the same exact
                     name. The response will contain the same information as if you did a
                     GET or HEAD request on the consumer resource.
-                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13218"/>43.5.3. Blocking Pulls with Accept-Wait</h3></div></div></div><p>Unless your queue or topic has a high rate of message flowing
+                </p></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13127"/>43.5.3. Blocking Pulls with Accept-Wait</h3></div></div></div><p>Unless your queue or topic has a high rate of message flowing
                 though it, if you use the pull protocol, you're going to be receiving a
                 lot of 503 responses as you continuously pull the server for new
                 messages. To alleviate this problem, the HornetQ REST interface provides
@@ -1044,7 +1044,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
 &lt;order&gt;...&lt;/order&gt;</pre><p>In this example, we're posting to a msg-consume-next URL and
                 telling the server that we would be willing to block for 30
                 seconds.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13230"/>43.5.4. Clean Up Your Consumers!</h3></div></div></div><p>When the client is done with its consumer or topic subscription it
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13139"/>43.5.4. Clean Up Your Consumers!</h3></div></div></div><p>When the client is done with its consumer or topic subscription it
                 should do an HTTP DELETE call on the consumer URL passed back from the
                 Location header or the msg-consumer response header. The server will
                 time out a consumer with the value of
@@ -1059,7 +1059,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
             registered URL either remotely through the REST interface, or by creating
             a pre-configured XML file for the HornetQ REST server to load at boot
             time.
-        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13246"/>43.6.1. The Queue Push Subscription XML</h3></div></div></div><p>Creating a push consumer for a queue first involves creating a
+        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13155"/>43.6.1. The Queue Push Subscription XML</h3></div></div></div><p>Creating a push consumer for a queue first involves creating a
                 very simple XML document. This document tells the server if the push
                 subscription should survive server reboots (is it durable). It must
                 provide a URL to ship the forwarded message to. Finally, you have to
@@ -1133,7 +1133,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
                     </p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
 &lt;push-registration&gt;
    &lt;link href="http://somewhere.com" type="application/json" method="PUT"/&gt;
-&lt;/push-registration&gt;</pre></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13328"/>43.6.2. The Topic Push Subscription XML</h3></div></div></div><p>The push XML for a topic is the same except the root element is
+&lt;/push-registration&gt;</pre></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13237"/>43.6.2. The Topic Push Subscription XML</h3></div></div></div><p>The push XML for a topic is the same except the root element is
                 push-topic-registration. (Also remember the <code class="literal">selector</code>
                 element is optional). The rest of the document is the same. Here's an
                 example of a template registration:
@@ -1145,7 +1145,7 @@ msg-consume-next: http://example.com/queues/jms.queue.bar/pull-consumers/333/con
    ]]&gt;
    &lt;/selector&gt;
    &lt;link rel="template" href="http://somewhere.com/resources/{id}/messages" method="POST"/&gt;
-&lt;/push-topic registration&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13338"/>43.6.3. Creating a Push Subscription at Runtime</h3></div></div></div><p>Creating a push subscription at runtime involves getting the
+&lt;/push-topic registration&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13247"/>43.6.3. Creating a Push Subscription at Runtime</h3></div></div></div><p>Creating a push subscription at runtime involves getting the
                 factory resource URL from the msg-push-consumers header, if the
                 destination is a queue, or msg-push-subscriptions header, if the
                 destination is a topic. Here's an example of creating a push
@@ -1200,7 +1200,7 @@ HTTP/1.1 201 Created
 Location: http://example.com/topics/jms.topic.bar/push-subscriptions/1-333-1212</pre><p>The Location header contains the URL for the created resource.
                         If you want to unregister this, then do a HTTP DELETE on this
                         URL.
-                    </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13371"/>43.6.4. Creating a Push Subscription by Hand</h3></div></div></div><p>You can create a push XML file yourself if you do not want to go
+                    </p></li></ol></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13280"/>43.6.4. Creating a Push Subscription by Hand</h3></div></div></div><p>You can create a push XML file yourself if you do not want to go
                 through the REST interface to create a push subscription. There is some
                 additional information you need to provide though. First, in the root
                 element, you must define a unique id attribute. You must also define a
@@ -1225,7 +1225,7 @@ Location: http://example.com/topics/jms.topic.bar/push-subscriptions/1-333-1212<
    &lt;durable&gt;true&lt;/durable&gt;
    &lt;link rel="template" href="http://somewhere.com/resources/{id}/messages" method="PUT"/&gt;
    &lt;topic&gt;jms.topic.foo&lt;/topic&gt;
-&lt;/push-topic-registration&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13384"/>43.6.5. Pushing to Authenticated Servers</h3></div></div></div><p>Push subscriptions only support BASIC and DIGEST authentication
+&lt;/push-topic-registration&gt;</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13293"/>43.6.5. Pushing to Authenticated Servers</h3></div></div></div><p>Push subscriptions only support BASIC and DIGEST authentication
                 out of the box. Here is an example of adding BASIC
                 authentication:
             </p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">
@@ -1247,7 +1247,7 @@ Location: http://example.com/topics/jms.topic.bar/push-subscriptions/1-333-1212<
    &lt;durable&gt;true&lt;/durable&gt;
    &lt;link rel="template" href="http://somewhere.com/resources/{id}/messages" method="POST"/&gt;
    &lt;header name="secret-header"&gt;jfdiwe3321&lt;/header&gt;
-&lt;/push-topic registration&gt;</pre></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13397"/>43.7. Creating Destinations</h2></div></div></div><p>You can create a durable queue or topic through the REST interface.
+&lt;/push-topic registration&gt;</pre></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13306"/>43.7. Creating Destinations</h2></div></div></div><p>You can create a durable queue or topic through the REST interface.
             Currently you cannot create a temporary queue or topic. To create a queue
             you do a POST to the relative URL /queues with an XML representation of
             the queue. The XML syntax is the same queue syntax that you would specify
@@ -1273,21 +1273,21 @@ Content-Type: application/hornetq.jms.topic+xml
 
 --- Response ---
 HTTP/1.1 201 Created
-Location: http://example.com/topics/jms.topic.testTopic</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13410"/>43.8. Securing the HornetQ REST Interface</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13413"/>43.8.1. Within JBoss Application server</h3></div></div></div><p>Securing the HornetQ REST interface is very simple with the JBoss
+Location: http://example.com/topics/jms.topic.testTopic</pre></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13319"/>43.8. Securing the HornetQ REST Interface</h2></div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13322"/>43.8.1. Within JBoss Application server</h3></div></div></div><p>Securing the HornetQ REST interface is very simple with the JBoss
                 Application Server. You turn on authentication for all URLs within your
                 WAR's web.xml, and let the user Principal to propagate to HornetQ. This
                 only works if you are using the JBossSecurityManager with HornetQ. See
                 the HornetQ documentation for more details.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13418"/>43.8.2. Security in other environments</h3></div></div></div><p>To secure the HornetQ REST interface in other environments you
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13327"/>43.8.2. Security in other environments</h3></div></div></div><p>To secure the HornetQ REST interface in other environments you
                 must role your own security by specifying security constraints with your
                 web.xml for every path of every queue and topic you have deployed. Here
                 is a list of URI patterns:
-            </p><div class="table"><a id="d0e13423"/><p class="title"><b>Table 43.1. </b></p><div class="table-contents"><table border="1"><colgroup><col/><col/></colgroup><tbody><tr><td>/queues</td><td>secure the POST operation to secure queue creation</td></tr><tr><td>/queues/{queue-name}</td><td>secure the GET HEAD operation to getting information about the queue.</td></tr><tr><td>/queues/{queue-name}/create/*</td><td>secure this URL pattern for producing messages.</td></tr><tr><td>/queues/{queue-name}/pull-consumers/*</td><td>secure this URL pattern for pulling messages.</td></tr><tr><td>/queues/{queue-name}/push-consumers/*</td><td>secure this URL pattern for pushing messages.</td></tr><tr><td>/topics</td><td>secure the POST operation to secure topic creation</td></tr><tr><td>/topics/{topic-name}</td><td>secure the GET HEAD operation to getting information about the topic.</td></tr><tr><td>/topics/{topic-name}/create/*</td><td>secure this URL pattern for producing messages.</td></tr><tr><td>/topics/{topic-name}/pull-subscriptions/*</td><td>secure this URL pattern for pulling messages.</td></tr><tr><td>/topics/{topic-name}/push-subscriptions/*</td><td>secure this URL pattern for pushing messages.</td></tr></tbody></table></div></div><br class="table-break"/></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13476"/>43.9. Mixing JMS and REST</h2></div></div></div><p>The HornetQ REST interface supports mixing JMS and REST producers
+            </p><div class="table"><a id="d0e13332"/><p class="title"><b>Table 43.1. </b></p><div class="table-contents"><table border="1"><colgroup><col/><col/></colgroup><tbody><tr><td>/queues</td><td>secure the POST operation to secure queue creation</td></tr><tr><td>/queues/{queue-name}</td><td>secure the GET HEAD operation to getting information about the queue.</td></tr><tr><td>/queues/{queue-name}/create/*</td><td>secure this URL pattern for producing messages.</td></tr><tr><td>/queues/{queue-name}/pull-consumers/*</td><td>secure this URL pattern for pulling messages.</td></tr><tr><td>/queues/{queue-name}/push-consumers/*</td><td>secure this URL pattern for pushing messages.</td></tr><tr><td>/topics</td><td>secure the POST operation to secure topic creation</td></tr><tr><td>/topics/{topic-name}</td><td>secure the GET HEAD operation to getting information about the topic.</td></tr><tr><td>/topics/{topic-name}/create/*</td><td>secure this URL pattern for producing messages.</td></tr><tr><td>/topics/{topic-name}/pull-subscriptions/*</td><td>secure this URL pattern for pulling messages.</td></tr><tr><td>/topics/{topic-name}/push-subscriptions/*</td><td>secure this URL pattern for pushing messages.</td></tr></tbody></table></div></div><br class="table-break"/></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="d0e13385"/>43.9. Mixing JMS and REST</h2></div></div></div><p>The HornetQ REST interface supports mixing JMS and REST producers
             and consumers. You can send an ObjectMessage through a JMS Producer, and
             have a REST client consume it. You can have a REST client POST a message
             to a topic and have a JMS Consumer receive it. Some simple transformations
             are supported if you have the correct RESTEasy providers installed.
-        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13481"/>43.9.1. JMS Producers - REST Consumers</h3></div></div></div><p>If you have a JMS producer, the HornetQ REST interface only
+        </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13390"/>43.9.1. JMS Producers - REST Consumers</h3></div></div></div><p>If you have a JMS producer, the HornetQ REST interface only
                 supports ObjectMessage type. If the JMS producer is aware that there may
                 be REST consumers, it should set a JMS property to specify what
                 Content-Type the Java object should be translated into by REST clients.
@@ -1304,7 +1304,7 @@ message.setStringProperty(org.hornetq.rest.HttpHeaderProperty.CONTENT_TYPE, "app
                 REST client is a push registration, then the type attribute of the link
                 element of the push registration should be set to the desired
                 type.
-            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13490"/>43.9.2. REST Producers - JMS Consumers</h3></div></div></div><p>If you have a REST client producing messages and a JMS consumer,
+            </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="d0e13399"/>43.9.2. REST Producers - JMS Consumers</h3></div></div></div><p>If you have a REST client producing messages and a JMS consumer,
                 HornetQ REST has a simple helper class for you to transform the HTTP
                 body to a Java object. Here's some example code:
             </p><pre xmlns="" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">

@@ -17,7 +17,6 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import javax.jms.Connection;
-import javax.jms.JMSException;
 import javax.naming.InitialContext;
 
 import org.hornetq.api.core.TransportConfiguration;
@@ -220,14 +219,6 @@ public abstract class HornetQExample
          System.out.println("#####################");
          System.out.println("###    SUCCESS!   ###");
          System.out.println("#####################");
-      }
-   }
-
-   protected static final void closeConnection(final Connection connection) throws JMSException
-   {
-      if (connection != null)
-      {
-         connection.close();
       }
    }
 }
