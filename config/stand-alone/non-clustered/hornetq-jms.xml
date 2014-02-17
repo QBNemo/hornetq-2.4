@@ -49,5 +49,10 @@
    <queue name="ExpiryQueue">
       <entry name="/queue/ExpiryQueue"/>
    </queue>
+   
+      
+   <queue name="MyQueue">
+      <entry name="/queue/MyQueue"/>
+   </queue>
 
 </configuration>
